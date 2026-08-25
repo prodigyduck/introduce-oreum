@@ -46,14 +46,12 @@
   .tag.blue{color:var(--blue);border-color:rgba(88,166,255,.4);background:rgba(88,166,255,.1)}
   .tag.green{color:var(--green);border-color:rgba(63,185,80,.4);background:rgba(63,185,80,.1)}
 
-  .imgs{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;margin-bottom:26px}
-  .ph{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
-  .ph img{width:100%;height:100%;min-height:230px;max-height:420px;object-fit:cover;display:block}
-  .ph .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 10px;font-size:12.5px;color:#e6edf3;background:linear-gradient(transparent,rgba(0,0,0,.78))}
-  .ph.small img{max-height:200px}
+  .imgs{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:26px}
+  .ph{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card);aspect-ratio:16/9}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .ph .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 12px;font-size:13.5px;color:#e6edf3;background:linear-gradient(transparent,rgba(0,0,0,.78))}
   .credit{font-size:11px;color:#586069;margin:-16px 0 24px;padding-left:2px}
   .credit a{color:#6a737d}
-  @media(max-width:680px){.imgs{grid-template-columns:1fr}.ph img{max-height:300px}}
 
   .info{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:24px}
   .info .box{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 17px}
@@ -70,7 +68,7 @@
   .desc li b{color:var(--text)}
 
   .map-embed{margin-top:26px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
-  .map-embed iframe{width:100%;height:320px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+  .map-embed iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
   .map-embed .map-bar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--card2);border-bottom:1px solid var(--line)}
   .map-embed .map-bar span{font-size:12.5px;color:var(--muted)}
   .map-embed .map-bar a{font-size:12.5px;color:var(--orange);text-decoration:none;font-weight:600}
@@ -87,6 +85,18 @@
   td b{color:var(--orange)}
   .mini{font-size:12px;color:var(--muted)}
   @media(max-width:720px){.hide-m{display:none}}
+
+  .intro-oreum{padding:48px 0 0;scroll-margin-top:64px}
+  .intro-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:32px 28px;background:linear-gradient(180deg,var(--card2) 0%,var(--card) 100%)}
+  .intro-badge{display:inline-block;font-size:12px;font-weight:600;color:var(--orange);background:var(--orange-dim);border:1px solid rgba(255,123,61,.3);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+  .intro-card h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;margin-bottom:12px;color:var(--text)}
+  .intro-card > p{font-size:15.5px;color:#c9d1d9;line-height:1.7;margin-bottom:24px}
+  .intro-card > p strong{color:var(--orange)}
+  .intro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .intro-item{background:rgba(13,17,23,.6);border:1px solid var(--line);border-radius:14px;padding:18px 16px;display:flex;gap:14px;align-items:flex-start}
+  .intro-item .icon{font-size:24px;line-height:1;flex-shrink:0;margin-top:2px}
+  .intro-item b{display:block;font-size:15px;color:var(--text);margin-bottom:4px}
+  .intro-item p{font-size:13px;color:var(--muted);line-height:1.5;margin:0}
 
   footer{padding:40px 0 56px;color:#586069;font-size:12px;border-top:1px solid var(--line);margin-top:40px}
   footer a{color:#6a737d}
@@ -108,6 +118,7 @@
 
 <nav>
   <div class="wrap">
+    <a href="#about">💡 오름이란?</a>
     <a href="#o1">① 새별오름</a>
     <a href="#o2">② 거문오름</a>
     <a href="#o3">③ 어승생악</a>
@@ -120,6 +131,41 @@
 </nav>
 
 <div class="wrap">
+
+<!-- 오름 소개 -->
+<section class="intro-oreum" id="about">
+  <div class="intro-card">
+    <div class="intro-badge">💡 알고 가면 더 좋은 제주 상식</div>
+    <h2>오름이란 무엇인가요?</h2>
+    <p>
+      <strong>'오름'</strong>은 '오르다'에서 유래한 순우리말이자 제주 방언으로, 화산활동으로 한라산 주변에 생겨난 <strong>독립된 소형 화산체(기생화산/측화산)</strong>를 일컫습니다.
+    </p>
+    <div class="intro-grid">
+      <div class="intro-item">
+        <span class="icon">🌋</span>
+        <div>
+          <b>360여 개의 작은 화산</b>
+          <p>한라산 분화 외에 마그마가 지표면 틈을 뚫고 나와 형성된 화산으로, 제주 전역에 무려 368개가 분포합니다.</p>
+        </div>
+      </div>
+      <div class="intro-item">
+        <span class="icon">🚶</span>
+        <div>
+          <b>누구나 가볍게 15~40분</b>
+          <p>험난한 고산 등반과 달리 산책하듯 부담 없이 정상에 오를 수 있어 남녀노소 누구나 즐기기 좋습니다.</p>
+        </div>
+      </div>
+      <div class="intro-item">
+        <span class="icon">✨</span>
+        <div>
+          <b>다채로운 풍경과 힐링</b>
+          <p>정상마다 개성 넘치는 분화구, 은빛 억새 능선, 시원한 바다와 웅장한 한라산 파노라마 뷰를 선사합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
 
 <!-- 1. 새별오름 -->
 <section id="o1">
@@ -138,10 +184,10 @@
     <span class="tag">가족 추천</span>
   </div>
   <div class="imgs">
-    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Saebyeol_Oreum_01.jpg/1280px-Saebyeol_Oreum_01.jpg" alt="새별오름 전경" loading="lazy"><div class="cap">새별오름 전경 — 제주 서부 대표 측화산</div></div>
-    <div class="ph small"><img src="images/saebyeol_sunset_naver.jpg" alt="새별오름 일몰" loading="lazy"><div class="cap">정상 능선에서 바라본 일몰</div></div>
+    <div class="ph"><img src="images/saebyeol_view.jpg" alt="새별오름 전경" loading="lazy"><div class="cap">새별오름 전경 — 제주 서부 대표 측화산</div></div>
+    <div class="ph"><img src="images/saebyeol_sunset_naver.jpg" alt="새별오름 일몰" loading="lazy"><div class="cap">정상 능선에서 바라본 일몰</div></div>
   </div>
-  <div class="credit">사진: Wikimedia Commons (CC BY-SA 4.0) · 일몰: ontheroad_gh의 <a href="https://blog.naver.com/ontheroad_gh/222387974225" target="_blank">네이버 블로그</a> (저작권: 해당 블로그)</div>
+  <div class="credit">사진: <a href="https://blog.naver.com/ontheroad_gh/222387974225" target="_blank">ontheroad_gh의 네이버 블로그</a> (저작권: 해당 블로그)</div>
   <div class="info">
     <div class="box"><div class="k">난이도</div><div class="v">쉬움 <em>●○○</em></div></div>
     <div class="box"><div class="k">정상까지</div><div class="v">15~20분</div></div>
@@ -158,7 +204,7 @@
       <li><b>가족 단위</b> — 아이·어르신과 함께 걷기 좋은 탐방로</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="새별오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.34968830000001%2C33.3622548%2C126.3656883%2C33.3702548&layer=mapnik&marker=33.3662548%2C126.3576883"></iframe><div class="map-bar"><span>📍 새별오름 · 33.3662548, 126.3576883</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="새별오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.3662548%2C126.3576883"></iframe><div class="map-bar"><span>📍 새별오름 · 33.3662548, 126.3576883</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%83%88%EB%B3%84%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -180,7 +226,7 @@
   </div>
   <div class="imgs">
     <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Geomunoreum.jpg/1280px-Geomunoreum.jpg" alt="거문오름 능선" loading="lazy"><div class="cap">거문오름 — 세계자연유산 용암동굴계의 근원 오름</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84_%EC%B4%88%EC%9B%90.jpg/1280px-%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84_%EC%B4%88%EC%9B%90.jpg" alt="거문오름 초원" loading="lazy"><div class="cap">정상부 초원지대</div></div>
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84_%EC%B4%88%EC%9B%90.jpg/1280px-%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84_%EC%B4%88%EC%9B%90.jpg" alt="거문오름 초원" loading="lazy"><div class="cap">정상부 초원지대</div></div>
   </div>
   <div class="credit">사진: Wikimedia Commons (PD / CC BY-SA 3.0)</div>
   <div class="info">
@@ -199,7 +245,7 @@
       <li><b>가을 단풍</b> — 10월 말~11월 초 유희나무 단풍이 절경</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="거문오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.7102215%2C33.450786900000004%2C126.7262215%2C33.4587869&layer=mapnik&marker=33.4547869%2C126.7182215"></iframe><div class="map-bar"><span>📍 거문오름 · 33.4547869, 126.7182215</span><a href="https://www.google.com/maps/search/?api=1&query=%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="거문오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.4547869%2C126.7182215"></iframe><div class="map-bar"><span>📍 거문오름 · 33.4547869, 126.7182215</span><a href="https://www.google.com/maps/search/?api=1&query=%EA%B1%B0%EB%AC%B8%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -220,7 +266,7 @@
   </div>
   <div class="imgs">
     <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Eoseungsaengak_03.jpg/1280px-Eoseungsaengak_03.jpg" alt="어승생악 능선" loading="lazy"><div class="cap">어승생악 능선 — 배경에 한라산</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Eoseungsaengak_04.jpg/1280px-Eoseungsaengak_04.jpg" alt="어승생악 등산로" loading="lazy"><div class="cap">정상까지 이어지는 탐방로</div></div>
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Eoseungsaengak_04.jpg/1280px-Eoseungsaengak_04.jpg" alt="어승생악 등산로" loading="lazy"><div class="cap">정상까지 이어지는 탐방로</div></div>
   </div>
   <div class="credit">사진: Wikimedia Commons (CC BY-SA 4.0)</div>
   <div class="info">
@@ -239,7 +285,7 @@
       <li><b>사진 작가</b> — 구름 많은 날 운해 속 한라산 명당</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="어승생악 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.4812586%2C33.392556%2C126.4972586%2C33.400555999999995&layer=mapnik&marker=33.3965560%2C126.4892586"></iframe><div class="map-bar"><span>📍 어승생악 · 33.3965560, 126.4892586</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EC%8A%B9%EC%83%9D%EC%95%85" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="어승생악 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.3965560%2C126.4892586"></iframe><div class="map-bar"><span>📍 어승생악 · 33.3965560, 126.4892586</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EC%8A%B9%EC%83%9D%EC%95%85" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -260,7 +306,7 @@
   </div>
   <div class="imgs">
     <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84.JPG/1280px-%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84.JPG" alt="다랑쉬오름 전경" loading="lazy"><div class="cap">다랑쉬오름 — 오름의 여왕</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84%EC%9D%98_%EB%B6%84%ED%99%94%EA%B5%AC.JPG/1280px-%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84%EC%9D%98_%EB%B6%84%ED%99%94%EA%B5%AC.JPG" alt="다랑쉬오름 분화구" loading="lazy"><div class="cap">정상부 원형 분화구 내부</div></div>
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84%EC%9D%98_%EB%B6%84%ED%99%94%EA%B5%AC.JPG/1280px-%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84%EC%9D%98_%EB%B6%84%ED%99%94%EA%B5%AC.JPG" alt="다랑쉬오름 분화구" loading="lazy"><div class="cap">정상부 원형 분화구 내부</div></div>
   </div>
   <div class="credit">사진: Wikimedia Commons (CC BY-SA 4.0)</div>
   <div class="info">
@@ -279,7 +325,7 @@
       <li><b>드라이브 중</b> 잠깐 올랐다 내려오기 좋은 규모감</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="다랑쉬오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.81352840000001%2C33.473711900000005%2C126.8295284%2C33.4817119&layer=mapnik&marker=33.4777119%2C126.8215284"></iframe><div class="map-bar"><span>📍 다랑쉬오름 · 33.4777119, 126.8215284</span><a href="https://www.google.com/maps/search/?api=1&query=%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="다랑쉬오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.4777119%2C126.8215284"></iframe><div class="map-bar"><span>📍 다랑쉬오름 · 33.4777119, 126.8215284</span><a href="https://www.google.com/maps/search/?api=1&query=%EB%8B%A4%EB%9E%91%EC%89%AC%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -301,7 +347,7 @@
   </div>
   <div class="imgs">
     <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Seongsan_Ilchulbong_01.jpg/1280px-Seongsan_Ilchulbong_01.jpg" alt="성산일출봉 전경" loading="lazy"><div class="cap">성산일출봉 — 등산로와 분화구</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Seongsan_Ilchulbong_02.jpg/1280px-Seongsan_Ilchulbong_02.jpg" alt="성산일출봉 분화구" loading="lazy"><div class="cap">정상 분화구 뷰</div></div>
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Seongsan_Ilchulbong_02.jpg/1280px-Seongsan_Ilchulbong_02.jpg" alt="성산일출봉 분화구" loading="lazy"><div class="cap">정상 분화구 뷰</div></div>
   </div>
   <div class="credit">사진: Wikimedia Commons (CC0)</div>
   <div class="info">
@@ -321,7 +367,7 @@
       <li><b>동부 코스</b> — 성산포구·우도 선착장과 도보 연계</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="성산일출봉 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.93281780000001%2C33.4548891%2C126.9488178%2C33.4628891&layer=mapnik&marker=33.4588891%2C126.9408178"></iframe><div class="map-bar"><span>📍 성산일출봉 · 33.4588891, 126.9408178</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%EC%9D%BC%EC%B6%9C%EB%B4%89" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="성산일출봉 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.4588891%2C126.9408178"></iframe><div class="map-bar"><span>📍 성산일출봉 · 33.4588891, 126.9408178</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%82%B0%EC%9D%BC%EC%B6%9C%EB%B4%89" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -360,7 +406,7 @@
       <li><b>노을 사진</b> — 서쪽 하늘 + 오름 실루엣 조합</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="용눈이오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.8245016%2C33.455906500000005%2C126.8405016%2C33.4639065&layer=mapnik&marker=33.4599065%2C126.8325016"></iframe><div class="map-bar"><span>📍 용눈이오름 · 33.4599065, 126.8325016</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%9A%A9%EB%88%88%EC%9D%B4%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="용눈이오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.4599065%2C126.8325016"></iframe><div class="map-bar"><span>📍 용눈이오름 · 33.4599065, 126.8325016</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%9A%A9%EB%88%88%EC%9D%B4%EC%98%A4%EB%A6%84" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -380,10 +426,10 @@
     <span class="tag blue">숲길 코스</span>
   </div>
   <div class="imgs">
-    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%841.jpg/1280px-%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%841.jpg" alt="아부오름 전경" loading="lazy"><div class="cap">아부오름 — 제주 최대급 화구의 오름</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%843.jpg/1280px-%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%843.jpg" alt="아부오름 내부" loading="lazy"><div class="cap">화구 내부 숲</div></div>
+    <div class="ph"><img src="images/abu_view.webp" alt="아부오름 전경" loading="lazy"><div class="cap">아부오름 전경 — 제주 최대급 화구의 오름</div></div>
+    <div class="ph"><img src="images/abu_sunset.jpg" alt="아부오름 노을" loading="lazy"><div class="cap">정상 능선에서 바라본 일몰 노을</div></div>
   </div>
-  <div class="credit">사진: Wikimedia Commons (CC BY-SA 3.0)</div>
+  <div class="credit">전경: Visit Jeju (비짓제주) · 노을: 네이버 블로그 (제주 친절한 공인중개사 사무소)</div>
   <div class="info">
     <div class="box"><div class="k">난이도</div><div class="v">쉬움~중 <em>●●○</em></div></div>
     <div class="box"><div class="k">정상까지</div><div class="v">30분</div></div>
@@ -400,7 +446,7 @@
       <li><b>조용한 곳</b> — 관광객 붐비는 곳 피하고 싶을 때</li>
     </ul>
   </div>
-  <div class="map-embed"><iframe title="아부오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.7716798%2C33.443564800000004%2C126.78767979999999%2C33.4515648&layer=mapnik&marker=33.4475648%2C126.7796798"></iframe><div class="map-bar"><span>📍 아부오름 · 33.4475648, 126.7796798</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%84+%EC%A0%9C%EC%A3%BC" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="아부오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.4475648%2C126.7796798"></iframe><div class="map-bar"><span>📍 아부오름 · 33.4475648, 126.7796798</span><a href="https://www.google.com/maps/search/?api=1&query=%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%84+%EC%A0%9C%EC%A3%BC" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 <div class="divider"></div>
 
@@ -421,7 +467,7 @@
   </div>
   <div class="imgs">
     <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Geum_Oreum_01.jpg/1280px-Geum_Oreum_01.jpg" alt="금오름 전경" loading="lazy"><div class="cap">금오름 전경 — 완만한 초원 능선</div></div>
-    <div class="ph small"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Geum_Oreum_02.jpg/1280px-Geum_Oreum_02.jpg" alt="금오름 등산로" loading="lazy"><div class="cap">숲길에서 초원으로</div></div>
+    <div class="ph"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Geum_Oreum_02.jpg/1280px-Geum_Oreum_02.jpg" alt="금오름 등산로" loading="lazy"><div class="cap">숲길에서 초원으로</div></div>
   </div>
   <div class="credit">사진: Wikimedia Commons (CC BY-SA 4.0)</div>
   <div class="info">
@@ -440,8 +486,7 @@
       <li><b>바람 쐬며 산책</b> — 낮고 완만해 부담 없음</li>
     </ul>
   </div>
-  8
-  <div class="map-embed"><iframe title="금오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.2978247%2C33.3506336%2C126.3138247%2C33.3586336&layer=mapnik&marker=33.3546336%2C126.3058247"></iframe><div class="map-bar"><span>📍 금오름 · 33.3546336, 126.3058247</span><a href="https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EC%98%A4%EB%A6%84+%EC%A0%9C%EC%A3%BC" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
+  <div class="map-embed"><iframe title="금오름 위치 지도" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=126.14%2C33.18%2C126.96%2C33.56&layer=mapnik&marker=33.3546336%2C126.3058247"></iframe><div class="map-bar"><span>📍 금오름 · 33.3546336, 126.3058247</span><a href="https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EC%98%A4%EB%A6%84+%EC%A0%9C%EC%A3%BC" target="_blank">Google Maps에서 크게 보기 →</a></div></div>
 </section>
 
 <div class="compare">
